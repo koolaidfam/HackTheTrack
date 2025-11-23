@@ -1,10 +1,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
 
-
-def load_data(csv_title):
-    return pd.read_csv(csv_title, sep=";")
+def load_data(csv_filename):
+    
+    script_dir = os.path.dirname(__file__)
+    csv_path = os.path.join(script_dir, csv_filename)
+    return pd.read_csv(csv_path, sep=";")
 
 st.set_page_config(page_title="Post-Event Analysis", layout="wide")
 st.title("🏁 Post-Event Driver Analysis Dashboard")
