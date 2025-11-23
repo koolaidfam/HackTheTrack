@@ -13,7 +13,7 @@ st.set_page_config(page_title="Post-Event Analysis", layout="wide")
 st.title("🏁 Post-Event Driver Analysis Dashboard")
 st.write("Use the filters to explore driver pace, consistency, and performance trends.")
 
-df = load_data("besttenlaps.csv")
+df = load_data("besttenlaps.CSV")
 
 
 def lap_to_seconds(t):
